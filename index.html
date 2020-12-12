@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head> <!-- Start of Head Information -->
+    <!-- Meta Data -->
+    <title>Note Focus</title>
+    <meta name="author" content="Kadyn Wishcop">
+    <meta name="description" content="Motes">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="viewport" content="user-scalable=no"> <!-- Disables Zoom/Scaling for mobile Devices. User can bypass this by viewing in desktop mode -->
+
+    <!-- Load CSS & JS Files -->
+    <link rel="stylesheet" href="css/app.css">
+
+    <!-- Load Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap" rel="stylesheet">
+
+  </head> <!-- End of Head Information -->
+  <body> <!-- Start of Body Information -->
+
+    <div class="popUp" id="popUpSave">
+      <div class="exitButton" onClick="exit()"><img src="img/buttons/exitButton.png" alt="Previous Song" width="24px" height="24px"></div>
+      <div class="baseHeader">How should we save?</div>
+      <div class="baseText">Since Minote is a browser based note taking app and we don't store any of your ntoes, you should probably save. We offer the options below to save your file.</div>
+      <div class="centerMe">
+        <div class="popupButton saveButton floatLeft" onClick="saveNoteTXT()">TXT</div>
+        <div class="popupButton saveButton floatLeft" onClick="saveNoteRTF()">RTF</div>
+        <div class="popupButton saveButton floatLeft" onClick="saveNoteDOC()">Doc</div>
+        <div class="popupButton saveButton floatLeft" onClick="fireBase()">Cloud</div>
+        <!--<div class="popupButton saveButton floatLeft" onClick="saveNoteRTF()">RTF</div>-->
+      </div>
+    </div>
+
+    <div id="note"> <!-- Start of Note App -->
+      <textarea class="floatLeft" id="noteHeader" autofocus maxlength="40" placeholder="New Header..."></textarea>
+      <div class="floatLeft" id="btnNew" onClick="newNote()">New Note</div>
+      <div class="floatLeft" id="btnExport" onClick="savePopUp()">Export Note</div>
+      <div class="floatLeft" id="btnAbout" onClick="aboutPopUp()">?</div>
+      <hr class="lineBreak">
+      <textarea id="noteText" placeholder="New note..."></textarea>
+    </div> <!-- End of Note App -->
+
+    <div class="popUp" id="popUpAbout">
+      <div class="exitButton" onClick="exit()"><img src="img/buttons/exitButton.png" alt="Previous Song" width="24px" height="24px"></div>
+      <div class="baseHeader">About Note Focus</div>
+      <div class="baseText">Note Focus was designed as a simple web app to take all the distractions away while writing things down. We offer a few ways to save your files. Check it out in the "Export Note" button.</div>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body> <!-- End of Body Information -->
+</html>
